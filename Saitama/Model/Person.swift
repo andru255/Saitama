@@ -26,10 +26,9 @@ extension Person: ListDiffable {
     }
 
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        if let object = object as? Person {
-            return name == object.name
-        }
-        return false
+        if self === object { return true }
+        guard let object = object as? Person else { return false }
+        return name == object.name
     }
 
 }

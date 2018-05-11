@@ -14,13 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var demoCollectionView: UICollectionView!
     let viewModel = DemoViewModel()
     lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
+        let adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self)
+        adapter.dataSource = self
+        return adapter
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         adapter.collectionView = demoCollectionView
-        adapter.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        dump(viewModel.personRepository.getAll())
         return viewModel.personRepository.getAll()
     }
 

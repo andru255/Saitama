@@ -1,0 +1,20 @@
+//
+//  DemoCollectionViewCell.swift
+//  Saitama
+//
+//  Created by Erik Flores on 5/10/18.
+//  Copyright © 2018 Orbis. All rights reserved.
+//
+
+import UIKit
+
+class DemoCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var textDescription: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+}

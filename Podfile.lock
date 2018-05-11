@@ -9,12 +9,12 @@ DEPENDENCIES:
   - IGListKit (~> 3.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - IGListKit
 
 SPEC CHECKSUMS:
   IGListKit: 71455d8fa95ff3d8594db667edd41c37db715c01
 
-PODFILE CHECKSUM: 94e1f8fbd342f45d913c4acaaf9a5fc02115717a
+PODFILE CHECKSUM: 8d18f50cd478b2769233e31cba0fe9ba190fd71e
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2
